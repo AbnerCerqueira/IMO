@@ -1,0 +1,44 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --cinza:#efefef;
+    --azul:#344966;
+    --rosa:#e76d83;
+}
+body{
+    background-color: var(--cinza);
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ul{
+    display: flex;
+}
+ul li{
+    list-style: none;
+    
+}
+a:link{
+    text-decoration: none;
+}
+ul li a{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 4%;
+    background-color:var(--azul);
+    border-radius: 2px;
+    color: var(--cinza);
+}
+ul li a:hover{
+    background-color: var(--cinza);
+    color: var(--azul);
+}
