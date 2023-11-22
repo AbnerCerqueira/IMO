@@ -1,0 +1,37 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.botao-login-etc{
+    margin: 8px;
+}
+#barra{
+    margin-left: 10px;
+}
+.cadastro-form{
+    margin-top: 5%;
+}
+#principal{
+    text-align: center;
+    height: 400px;
+    background-color: #0045F6;
+    border-top-left-radius: 20px;
+    border-end-start-radius: 20px;
+    color: white;
+}
+#principal img{
+    height: 150px;
+    margin: 40px 20px;
+}
+#anuncio{
+    border-top-right-radius: 20px;
+    border-end-end-radius: 20px;
+    background-color: #6DFFEE;
+}
+#anuncio p{
+    margin-top: 40px;
+    text-align: center;
+}
+#principal-embaixo{
+    height: 200px;
+    background-color: #0045F6;
+}
