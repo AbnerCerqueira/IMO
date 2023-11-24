@@ -45,11 +45,11 @@
 }
 
 #anuncio {
+    background-image: url(../img/Vector\ 1.svg);
     color: black;
     width: 20%;
     border-top-right-radius: 20px;
     border-end-end-radius: 20px;
-    background-color: #6DFFEE;
 }
 
 #anuncio p {
@@ -72,8 +72,13 @@
 }
 
 #comece {
-    width: 20%;
-    background-color: #6DFFEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/Vector\ 2.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
     border-top-left-radius: 20px;
     border-end-start-radius: 20px;
 }
