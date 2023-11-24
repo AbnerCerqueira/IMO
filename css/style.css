@@ -1,5 +1,6 @@
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+* {  
+    font-family: 'Inter', sans-serif;
     font-size: 1.02em;
 }
 

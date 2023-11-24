@@ -59,3 +59,7 @@ function Logado(){
         `
     }
 }
+function Desloga(){
+    sessionStorage.removeItem("logado")
+    window.location.replace("index.html")
+}
