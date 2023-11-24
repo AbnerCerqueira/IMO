@@ -48,3 +48,14 @@ function Login(){
     }
       
 }
+function Logado(){
+    const banco = JSON.parse(sessionStorage.getItem("logado"))
+    if(banco == null){
+        null
+    }
+    else{
+        document.querySelector("#informacoes").innerHTML = `
+        <img src ="img/user.png" height="50px"></img>
+        `
+    }
+}
