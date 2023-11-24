@@ -2,6 +2,9 @@
 function Entra(){
     window.open("cadastro.html")
 }
+function Entra2(){
+    window.open("login.html")
+}
 function Banco(){
     if (localStorage.getItem("banco") === null) {
         const banco = [];

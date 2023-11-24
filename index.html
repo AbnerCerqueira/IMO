@@ -8,15 +8,15 @@
     <title>IMO</title>
 </head>
 
-<body onload="Logado()" >
+<body onload="Logado()">
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand"><img id="barra" src="img/bar.png" height="35px"></a>
+                <a class="navbar-brand"><img id="barra" src="img/Component 2.svg" height="35px"></a>
                 <form class="d-flex" role="search" id="informacoes">
                     <input class="form-control me-2 botao-login-etc" type="search" placeholder="Procure um curso"
                         aria-label="Search">
-                    <button class="btn btn-outline-secondary botao-login-etc" type="submit">Entrar</button>
+                    <button class="btn btn-outline-secondary botao-login-etc" type="submit" onclick="Entra2()">Entrar</button>
                     <button class="btn btn-outline-primary botao-login-etc" type="submit"
                         onclick="Entra()">Cadastrar</button>
                 </form>
@@ -29,10 +29,10 @@
             <div></div>
             <div id="retangulo1">
                 <div id="thumbs">
-                    <img src="img/thumbnail.jpg" alt="...">
-                    <img src="img/thumbnail.jpg" alt="...">
-                    <img src="img/thumbnail.jpg" alt="...">
-                    Confira os cursos mais assistidos do momento
+                    <a href="#" class="cursos"><img src="img/debian.png" alt="..."></a>
+                    <a href="#" class="cursos"><img src="img/java.jpg" alt="..."></a>
+                    <a href="#" class="cursos"><img src="img/photoshop.jpg" alt="..."></a>
+                    Escolha um curso e começe agora!
                 </div>
                 <div id="anuncio">
                     <p>
@@ -61,7 +61,7 @@
     </div>
 
     <footer>
-        <img src="" alt="LOGO" srcset="">
+        <img src="img/logoclara2.svg" alt="LOGO" srcset="" height="50px">
         <ul>
             <li><a id="teste" href="#">Biblioteca de cursos</li></a>
             <li><a href="#">Colabore</li></a>
