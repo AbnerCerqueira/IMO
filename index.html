@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/botaoplay.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/components/button.css">
+    <link rel="stylesheet" href="css/components/retangulo.css">
+    <link rel="stylesheet" href="css/components/title.css">
+    <link rel="stylesheet" href="css/components/footer.css">
     <title>IMO</title>
 </head>
 
 <header>
-    <div>
-        <a href="index.html"><img id="barra" src="img/bar.png" height="35px"></a>
+    <div id="lado_direito">
+        <a href="index.html"><img src="img/logo.svg" height="50px"></a>
+        <div id="div_search">
+            <a href="#"><img src="img/search.png" alt="" srcset="" height="35px"></a>
+            <input type="text" placeholder="Pesquise um curso" id="search">
+        </div>
     </div>
-    <div id="div-search">
-        <input type="text" placeholder="Pesquise um curso" id="search">
-        <a href="#"><img src="img/search.png" alt="" srcset="" height="30px"></a>
-    </div>
-
     <div>
+        <div><a href="#">Colabore conosco!</a></div>
         <div id="informacoes">
             <a href="login.html"><button class="botao" type="submit">Entrar</button></a>
             <a href="cadastro.html"><button class="botao" type="submit">Cadastrar</button></a>
@@ -30,28 +34,29 @@
 <body onload="Logado()">
     <div id="main">
         <div>
-            <div></div>
-            <div id="retangulo1">
-                <div id="retangulo1-direita">
-                    <div id="retangulo1-direita-dentro">
+            <div class="retangulo">
+                <div id="retangulo_thumbs">
+                    <div id="retangulo-direita-dentro">
                         <div class="thumbs">
-                            <a href="aula-excel-powerbi/powerbi-excel.html" class="cursos" target="_blank"><img src="img/excel-powerbi.svg" alt="..."></a>
+                            <a href="aula-excel-powerbi/powerbi-excel.html" class="cursos" target="_blank"><img
+                                    src="img/excel-powerbi.svg" alt="..."></a>
                             <p>
                                 •Power Bi com Excel
                             </p>
                         </div>
                         <div class="thumbs">
-                            <a href="aula-html/html.html" class="cursos" target="_blank"><img src="img/site-exemplo.svg" alt="..."></a>
+                            <a href="aula-html/html.html" class="cursos" target="_blank"><img src="img/site-exemplo.svg"
+                                    alt="..."></a>
                             <p>
                                 •Aprenda a fazer<br> seu primeiro site
                             </p>
                         </div>
                     </div>
                     <div>
-                        <p id="confira">Confira os cursos mais assistidos do momento!</p>
+                        <p class="title">Confira os cursos mais assistidos do momento!</p>
                     </div>
                 </div>
-                <div id="anuncio">
+                <div class="retangulo_fundo">
                     <p>
                         É criador de conteudo
                         educativo e quer
@@ -60,13 +65,15 @@
                         <br>
                         na nossa plataforma?
                     </p>
-                    <button class="botao2" type="submit">Colabore!</button>
+                    <button class="botao -second" type="submit">Colabore!</button>
                 </div>
             </div>
         </div>
-        <div id="retangulo2">
-            <div id="comece">
-                <button class="botao2" type="submit">Começar agora!</button>
+        <div class="retangulo -second">
+            <div class="retangulo_fundo -second">
+                <a href="aula-html/html.html" target="_blank">
+                    <button class="botao -second" type="submit">Começar agora!</button>
+                </a>
             </div>
             <p>
                 Nossos cursos são acessiveis mesmo sem possuir cadastro, você pode navegar pela nossa biblioteca e

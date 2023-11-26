@@ -11,13 +11,16 @@
     position: absolute;
     text-align: center;
     z-index: 9;
-    width: 6%;
-    height:100%;
+    width: 4%;
+    height:100vh;
     left: 0px;
     background-color: #0045F6;
 }
+#barra-lateral img{
+    height: 30px;
+}
 .imgs-barra{
-    margin-top: 20%;
+    margin-top: 50%;
 }
 header{
     height: 100px;

@@ -1,0 +1,61 @@
+.retangulo {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 450px;
+    background-color: #0045F6;
+    border-radius: 10px;
+    color: white;
+}
+.retangulo.-second{
+    height: 200px;
+}
+.retangulo_fundo{
+    height: 100%;
+    width: 70%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../../img/fundo-retangulo1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: black;
+}
+.retangulo_fundo.-second{
+    background-image: url(../../img/fundo-retangulo2.svg);
+}
+.retangulo p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.retangulo.-second p {
+    margin: 5%;
+    text-align: justify;
+}
+.retangulo img {
+    height: 150px;
+    margin: 10px 20px;
+    transition: 0.3s;
+}
+.retangulo img:hover {
+    height: 160px;
+}
+
+#retangulo_thumbs {
+    width: 100%;
+}
+
+#retangulo-direita-dentro {
+    display: flex;
+    justify-content: center;
+}
+#anuncio p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+

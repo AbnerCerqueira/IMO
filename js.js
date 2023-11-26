@@ -51,8 +51,11 @@ function Logado() {
     }
     else {
         document.querySelector("#informacoes").innerHTML = `
+            <a href="informacoes.html">
+            Meus Cursos
+            </a>
             <a href="#" onclick="Desloga()" >
-            <img src ="img/deslogar.svg" height="50px"></img>
+            <img src ="img/desloga.png" height="50px"></img>
             </a>
             <a href="informacoes.html">
             <img src ="img/user.png" height="50px" id="user"></img>

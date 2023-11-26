@@ -1,0 +1,26 @@
+.botao {
+    height: 50px;
+    width: 120px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #0045F6;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #6DFFEE;
+    color: black;
+}
+
+.botao.-second {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.botao.-second:hover {
+    background-color: #0045F6;
+    color: white;
+    border: none;
+}
