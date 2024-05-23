@@ -13,6 +13,11 @@ router.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
+router.get('/configurar-conta', (req, res) => {
+    res.render('configurar-conta.ejs', {
+        error: req.query.error
+    })
+})
 router.get('/login', (req, res) => {
     res.render('login.ejs', {
         error: req.query.error

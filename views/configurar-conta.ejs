@@ -7,33 +7,31 @@
     <title>Configurações da Conta</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="../public/css/configurar-conta.css">
+    <link rel="stylesheet" href="/css/configurar-conta.css">
+    <link rel="stylesheet" href="/css/components/header.css">
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbarcss">
-            <div class="nav-wrapper container">
-                <a href="#" class="brand-logo">
-                    <img src="../public/img/logoHover.svg" alt="Logo IMO" style="height: 50px; vertical-align: middle;">
-                </a>
-
-                <form class="pesquisa">
-                    <div class="input-field">
-                        <input id="search" type="search" required>
-                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
-                    </div>
+    <header class="custom-header">
+        <div class="logo">
+            <a href="/"><img src="/img/headerlogoinicial.svg" alt="" id="teste" onmouseenter="teste()" onmouseleave="teste()"></a>
+            <div class="pesquisa">
+                <img src="/img/headersearch.svg" alt="">
+                <form action="">
+                    <input type="search" name="" id="" placeholder="Pesquise por qualquer coisa..."
+                        class="caixa-pesquisa">
                 </form>
-
-                <ul class="right">
-                    <li><a href="#" class="btn botaoporra">Aprendizado</a></li>
-                    <li><a href="#" class="white-text"><i class="material-icons">person</i></a></li>
-                </ul>
-                
             </div>
-        </nav>
+        </div>
+
+
+        <div class="direita">
+            <ul>
+                <li><a href="" class="botao">Aprendizado</a></li>
+                <li><a href=""><img src="/img/headeruser.svg" alt="" width="32px" ></a></li>
+            </ul>
+        </div>
     </header>
 
     <div class="container white-text">
@@ -46,7 +44,7 @@
 
                 <div class="row valign-wrapper">
                     <div class="col s4">
-                        <img src="../public/img/ciscomen.svg" class="circle responsive-img" width="100">
+                        <img src="/img/ciscomen.svg" class="circle responsive-img" width="100">
                     </div>
                     <div class="col s8">
                         <a href="#" class="btn botaoporra">Editar foto de perfil</a>
@@ -91,6 +89,7 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/header.js"></script>
 </body>
 
 </html>

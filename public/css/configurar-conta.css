@@ -1,12 +1,12 @@
 body {
     background-color: #2D2F31;
     font-family: 'FonteIMO','Courier New', Courier, monospace,serif;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 @font-face {
     font-family: 'FonteIMO';
-    src: url('../../fontes/bahnschrift/BAHNSCHRIFT.TTF') format('truetype');
+    src: url('/fontes/bahnschrift/BAHNSCHRIFT.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -37,33 +37,6 @@ input[type=password].white-text {
     color: white;
 }
 
-/* ______________________________________________________ */
-
-
-/* ----------------NAVBAR------------------- */
-
-.navbarcss{
-    background-color: #2D2F31;
-    box-shadow: 2px 0px 1px #ffffff !important;
-}
-
-.nav-wrapper .brand-logo {
-    flex: 0 0 auto;
-}
-.pesquisa{
-    width: 650px;
-    
-}
-nav.navbarcss {
-    position: relative;
-}
-
-nav.navbarcss .pesquisa {
-    position: absolute;
-    right: 250px; 
-    top: 50%; 
-    transform: translateY(-50%);
-}
 /* ______________________________________________________ */
 
 

@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex !important;
+    justify-content: space-around !important;
+    height: 100px !important;
+    background-color: #2d2f31 !important;
+    align-items: center !important;
+    box-shadow: 2px 0px 1px white !important;
+}
+
+.logo{
+    display: flex !important;
+    align-items: center !important;
+}
+
+.pesquisa{
+    position: relative !important;
+    padding-left: 60px !important;
+}
+.pesquisa > img {
+    position: absolute !important;
+    left: 66px !important;
+    width: 30px !important;
+    top: 3px !important;
+}
+.caixa-pesquisa{
+    border-radius: 50px  !important;
+    width: 560px !important;
+    height: 35px !important;
+    padding-left: 40px !important;
+    background-color: #E0E6EB !important;
+    box-shadow: inset 2px 2px 2px rgb(148, 148, 148) !important;
+}
+
+.direita > ul{
+    display: flex !important;
+    justify-content: space-around !important;
+    list-style: none !important;
+    height: 50px !important;
+    align-items: center !important;
+}
+
+.direita > ul > li{
+    padding: 0px 10px !important;
+}
+
+.botao{
+    color: white !important;
+    border: 1px solid white !important;
+    background-color: rgba(0, 0, 255, 0) !important;
+    padding: 7px !important;
+}
+
+.botao:hover{
+    background-color: #1564e5 !important;
+    border-color: #1564e5 !important;
+    transition: 0.5s !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #2d2f31;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #3b3c4b;
+}
+
