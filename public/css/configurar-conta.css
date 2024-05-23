@@ -1,0 +1,109 @@
+body {
+    background-color: #2D2F31;
+    font-family: 'FonteIMO','Courier New', Courier, monospace,serif;
+    letter-spacing: 2px;
+}
+
+@font-face {
+    font-family: 'FonteIMO';
+    src: url('/fontes/bahnschrift/BAHNSCHRIFT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----------------INPUTS------------------- */
+
+input[type=email]:focus+label,
+input[type=password]:focus+label {
+    color: #1e64e5 !important;
+}
+
+input[type=email]:focus,
+input[type=password]:focus {
+    border-bottom: 1px solid #1e64e5 !important;
+    box-shadow: 0 1px 0 0 #1e64e5 !important;
+}
+
+input[type=email].white-text,
+input[type=password].white-text {
+    color: white !important;
+}
+
+.input-field label {
+    color: #ffffff;
+}
+
+.input-field input[type=email] {
+    color: white;
+}
+
+/* ______________________________________________________ */
+
+
+/* ----------------NAVBAR------------------- */
+
+.navbarcss{
+    background-color: #2D2F31;
+    box-shadow: 2px 0px 1px #ffffff !important;
+}
+
+.nav-wrapper .brand-logo {
+    flex: 0 0 auto;
+}
+.pesquisa{
+    width: 650px;
+    
+}
+nav.navbarcss {
+    position: relative;
+}
+
+nav.navbarcss .pesquisa {
+    position: absolute;
+    right: 250px; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+/* ______________________________________________________ */
+
+
+.linha {
+    border: 1px solid #5E6367;
+    margin: 10px 0;
+    background-color: #5E6367 !important;
+}
+
+.linha-pequena {
+    width: calc(76% - 30px);
+    margin-left: 0;
+}
+
+.valign-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.input-field.col.s8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+
+.col.s4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding-left: 10px;
+}
+
+
+.botaoporra{
+    color: #ffffff !important;
+    background-color: #ffffff00 !important;
+    border: 1px solid #ffffff !important;
+}
+
+.botaoporra:hover{
+    background-color: #1e64e5 !important;
+    border: 1px solid #1e64e5 !important;
+}
+
