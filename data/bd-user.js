@@ -1,7 +1,7 @@
 const con = require('./database')
   
-  function getUserByLoginPass(login, senha, callback) {
-    connection.query('SELECT id, login FROM user WHERE login = ? AND senha = ?', [login, senha], (error, results, fields) => {
+  function getUser(email, senha, callback) {
+    con.query('SELECT id, username FROM user WHERE email = ? AND senha = ?', [email, senha], (error, results, fields) => {
       if (error) {
         callback(error, null)
         return
@@ -11,7 +11,7 @@ const con = require('./database')
   }
    
   function addUser(user, callback) {
-    connection.query('INSERT INTO user SET ?', user, (error, results, fields) => {
+    con.query('INSERT INTO user SET ?', user, (error, results, fields) => {
       if (error) {
         callback(error, null)
         return 
@@ -21,7 +21,7 @@ const con = require('./database')
   }
    
   function updateUser(id, user, callback) {
-    connection.query('UPDATE user SET ? WHERE id = ?', [user, id], (error, results, fields) => {
+    con.query('UPDATE user SET ? WHERE id = ?', [user, id], (error, results, fields) => {
       if (error) {
         callback(error, null)
         return  
@@ -31,7 +31,7 @@ const con = require('./database')
   }
    
   function deleteUser(id, callback) {
-    connection.query('DELETE FROM user WHERE id = ?', [id], (error, results, fields) => {
+    con.query('DELETE FROM user WHERE id = ?', [id], (error, results, fields) => {
       if (error) {
         callback(error, null)
         return  
@@ -41,7 +41,7 @@ const con = require('./database')
   }
 
   module.exports = {
-    getUserByLoginPass,
+    getUser,
     addUser,
     updateUser,
     deleteUser

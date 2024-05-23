@@ -18,7 +18,7 @@
     <p class="title">CADASTRO</p>
     <!-- Formulario -->
 
-    <form class="form">
+    <form class="form" action="/cadastro" method="post">
       <div class="input-group">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="">
@@ -34,7 +34,10 @@
           <a rel="noopener noreferrer" href="#"></a>
         </div>
       </div>
-      <button class="sign">Cadastrar-se</button>
+      <% if (error) {%>
+        Algo deu errado
+        <% } %>
+      <button class="sign" type="submit">Cadastrar-se</button>
     </form>
     <!-- ____________________________________________ -->
 

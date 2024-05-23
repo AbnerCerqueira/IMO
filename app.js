@@ -1,11 +1,13 @@
 const express = require('express')
+const session = require('express-session')
 const app = express()
 
 app.set("views engine", "ejs")
 
+app.use(express.urlencoded({ extended: true}))
 app.use(express.static('public'))
 
-const index = require('./routes/index')
+const index = require('./routes/routes-index')
 
 app.use('/', index)
 
