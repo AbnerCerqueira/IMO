@@ -32,17 +32,21 @@ router.get('/cadastro', (req, res) => {
 
 // POST
 router.post("/cadastro", (req, res) => {
-    const dadosFornecidos = req.body
-    
-    if (!dadosFornecidos.email || !dadosFornecidos.password) {
+    const { email, username, password, confpass } = req.body
+
+    if (!email || !password) {
         res.redirect("/cadastro?error=error")
         return
     }
-    if (dadosFornecidos.password !== dadosFornecidos.confpass) {
+    if (password !== confpass) {
         res.redirect("/cadastro?error=error")
         return
     }
-    bd.addUser(dadosFornecidos, (error) => {
+    bd.addUser({
+        email_estudante: email,
+        username_estudante: username,
+        password_estudante: password
+    }, (error) => {
         if (error) {
             res.redirect("/cadastro?error=error")
             return
@@ -52,18 +56,18 @@ router.post("/cadastro", (req, res) => {
 })
 
 router.post("/login", (req, res) => {
-    const dadosFornecidos = req.body
-    
-    bd.getUser(dadosFornecidos.email, dadosFornecidos.senha, (error, results) => {
-        if (error || !results.length) {
+    const { email, password } = req.body
+
+    bd.getUser(email, password, (error, results) => {
+        if (!results.length) {
             res.redirect("/login?error=error")
             return
         }
         req.session.user = {
-            id: results.id,
-            login: results[0].login
+            id: results[0].id_estudante,
+            username: results[0].username_estudante
         }
-        res.redirect(`/user/${req.session.user.login}`)
+        res.redirect(`/user/${req.session.user.username}`)
     })
 })
 

@@ -1,10 +1,12 @@
+-- Active: 1713276538061@@127.0.0.1@3306@fds
 create database imo;
 use imo;
 
 create table estudante(
 	id_estudante int primary key auto_increment,
+    username_estudante varchar(100) not null, 
     email_estudante varchar(100) not null,
-    password_estutante varchar(100) not null
+    password_estudante varchar(100) not null
 );
 
 create table curso(

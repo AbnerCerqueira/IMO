@@ -6,6 +6,11 @@ app.set("views engine", "ejs")
 
 app.use(express.urlencoded({ extended: true}))
 app.use(express.static('public'))
+app.use(session({
+    secret: 'fçlsakjfdçlksajdfçlksdj',
+    resave: false,
+    saveUninitialized: false
+}))
 
 const index = require('./routes/routes-index')
 
