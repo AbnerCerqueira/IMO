@@ -13,8 +13,10 @@ app.use(session({
 }))
 
 const index = require('./routes/routes-index')
+const user = require('./routes/routes-user')
 
 app.use('/', index)
+app.use('/user', user)
 
 const port = process.env.PORT || 8080
 app.listen(port, () => {

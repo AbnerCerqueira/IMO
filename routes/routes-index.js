@@ -13,11 +13,6 @@ router.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
-router.get('/configurar-conta', (req, res) => {
-    res.render('configurar-conta.ejs', {
-        error: req.query.error
-    })
-})
 router.get('/login', (req, res) => {
     res.render('login.ejs', {
         error: req.query.error
@@ -34,7 +29,7 @@ router.get('/cadastro', (req, res) => {
 router.post("/cadastro", (req, res) => {
     const { email, username, password, confpass } = req.body
 
-    if (!email || !password) {
+    if (!email || !username || !password) {
         res.redirect("/cadastro?error=error")
         return
     }
