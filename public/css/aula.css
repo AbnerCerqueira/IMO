@@ -1,0 +1,124 @@
+body {
+    background-color: #2D2F31;
+    font-family: 'FonteIMO','Courier New', Courier, monospace,serif;
+
+}
+
+@font-face {
+    font-family: 'FonteIMO';
+    src: url('/fontes/bahnschrift/BAHNSCHRIFT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ____________________________________________________________________________________________________*/
+
+.principal{
+    display: flex;
+    justify-content: center;
+}
+
+/* __________________________________________VIDEO_____________________________________________*/
+
+
+.container-video{
+    background-color: #E0E6EB;
+    max-width: 100vw;
+}
+
+.video{
+    background-color: #2D2F31;
+}
+
+
+.info-video{
+    display: flex;
+    justify-content: space-between;
+    height: 55px;
+    align-items: center;
+
+    color: white;
+}
+
+.info-video > h3{
+    margin-left: 100px;
+}
+.controles{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 55px;
+    width: 500px;
+}
+
+.descricao{
+    display: flex;
+    text-align: justify;
+}
+
+.descricao-texto{
+    width: 700px;
+    padding: 20px 25px 0px 25px;
+}
+.descricao-infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+/* ____________________________________________________________________________________________________*/
+
+/* __________________________________________MENU VIDEO________________________________________________*/
+
+.menu-curso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    background-color: #3b3c4b;
+    width: 300px;
+}
+.menu-curso > h3{
+    padding-top: 10px;
+    color: white;
+}
+
+.menu-curso > ul{
+    list-style: none;
+    width: 300px;
+    min-height: 650px;
+}
+
+.menu-botao {
+    display: flex;
+    align-items: center; 
+    min-height: 60px;
+    margin: 10px 0px; 
+    padding-left: 20px;
+    border-top: 1px solid #60617A;
+    border-bottom: 1px solid #60617A;
+    
+}
+
+.menu-botao::before {
+    content: '•';
+    margin-right: 5px;
+    font-size: 1.5em; 
+    color: white; 
+}
+
+.menu-botao > a{
+    display: flex;
+    align-items: center; 
+    width: 290px;
+    height: 60px;
+}
+a:visited{
+    color: white;
+}
+a{
+    color: white;
+}
+
