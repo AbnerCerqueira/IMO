@@ -6,8 +6,9 @@ create table estudante(
     username_estudante varchar(100) not null, 
     email_estudante varchar(100) not null,
     password_estudante varchar(100) not null,
-    diretorio_foto_estudante varchar(400)
+    diretorio_foto_estudante varchar(400) DEFAULT '/img/uploads/vasto-bode.png'
 );
+
 
 create table estudante_log(
     username_estudante_log varchar(100) not null, 

@@ -12,6 +12,10 @@ app.use(session({
     saveUninitialized: false
 }))
 
+app.use(function(req, res, next) {
+    res.status(404).redirect('/pagina_nao_encontrada'); // Redireciona para a página desejada
+})
+
 const index = require('./routes/routes-index')
 const user = require('./routes/routes-user')
 

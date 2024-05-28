@@ -29,7 +29,7 @@
         <div class="direita">
             <ul>
                 <li><a href="" class="botao">Aprendizado</a></li>
-                <li><a href=""><img src="/img/headeruser.svg" alt="" width="32px" ></a></li>
+                <li><a href=""><img src="<%= fotoPerfil %>" alt="" id="fotoPerfil"></a></li>
             </ul>
         </div>
     </header>
@@ -43,16 +43,9 @@
                 <hr class="linha linha-pequena">
 
                 <div class="row valign-wrapper">
-                    <% if(fotoPerfil) { %>
-                        <div class="col s4">
-                            <img src="<%= fotoPerfil %>" class="circle responsive-img" width="100">
-                        </div>
-                    <% } else { %>
-
-                        <div class="col s4">
-                            <img src="/img/ciscomen.svg" class="circle responsive-img" width="100">
-                        </div>
-                    <% } %>
+                    <div class="col s4 center">
+                        <img src="<%= fotoPerfil %>" id="fotoPerfil">
+                    </div>
                     <div class="col s8">
                         <form method="post" action="/user/<%= username %>/configurar-conta/foto-perfil" enctype="multipart/form-data">
                             <input type="file" name="file">

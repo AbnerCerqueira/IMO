@@ -80,3 +80,13 @@ input[type=password].white-text {
     border: 1px solid #1e64e5 !important;
 }
 
+#fotoPerfil {
+    height: 50px;
+    max-width: 50px;
+    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    transform: scale(1.3);
+}

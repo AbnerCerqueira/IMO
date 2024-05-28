@@ -1,7 +1,7 @@
 const express = require('express')
 const multer = require('multer')
 const bd = require('../data/bd-user')
-const storage = require('../middleware/multer')
+const storage = require('../middlewares/multer')
 
 const router = express.Router()
 
@@ -11,7 +11,7 @@ router.use((req, res, next) => {
 
 router.get('/:username/configurar-conta', (req, res) => {
     if (!req.session.user) {
-        res.send("Faça login para acesar a pagina")
+        res.redirect('/cadastro')
     }
     res.render('configurar-conta.ejs', {
         username: req.session.user.username,
@@ -45,7 +45,13 @@ router.post('/:username/configurar-conta/atualizar', (req, res) => {
 const upload = multer({ storage })
 
 router.post('/:username/configurar-conta/foto-perfil', upload.single('file'),  (req, res) => {
-    const fotoPerfil = req.file?.path.substring(6)
+    const path = req.file?.path.substring(6).split('\\')
+    let fotoPerfil = '';
+    for (let i = 1; i < path.length; i++) { // loop para arrumar diretorio da imagem
+        const barra = '/'
+        path[i] = barra + path[i]
+        fotoPerfil += path[i]
+    }
 
     bd.addPhoto({
         diretorio_foto_estudante: fotoPerfil
