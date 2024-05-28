@@ -1,4 +1,3 @@
--- Active: 1713276538061@@127.0.0.1@3306@fds
 create database imo;
 use imo;
 
@@ -6,8 +5,19 @@ create table estudante(
 	id_estudante int primary key auto_increment,
     username_estudante varchar(100) not null, 
     email_estudante varchar(100) not null,
-    password_estudante varchar(100) not null
+    password_estudante varchar(100) not null,
+    diretorio_foto_estudante varchar(400)
 );
+
+create table estudante_log(
+    username_estudante_log varchar(100) not null, 
+    email_estudante_log varchar(100) not null,
+    password_estudante_log varchar(100) not null,
+    operacao varchar(50) not null,
+    id_estudante_log int,
+    foreign key (id_estudante_log) references estudante(id_estudante)
+);
+
 
 create table curso(
 	id_curso int primary key auto_increment,
@@ -17,9 +27,7 @@ create table curso(
 create table certificados(
 	id_certificado int primary key auto_increment,
     nome_aula varchar(100) not null,
-    
     id_curso int,
-    
     constraint fk_CertificadoCurso
     foreign key(id_curso) references curso(id_curso)
 );
@@ -50,7 +58,6 @@ create table estudante_curso(
 create table estudante_certificados(
 	id_certificado int,
     id_estudante int,
-    
     foreign key(id_certificado) references certificados(id_certificado),
     foreign key(id_estudante) references estudante(id_estudante)
 );
@@ -58,12 +65,6 @@ create table estudante_certificados(
 create table aulas_curso(
 	id_aula int,
     id_curso int,
-    
     foreign key(id_aula) references aulas(id_aula),
     foreign key(id_curso) references curso(id_curso)
 );
-
-
-
-
-

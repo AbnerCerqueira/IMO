@@ -60,7 +60,8 @@ router.post("/login", (req, res) => {
         }
         req.session.user = {
             id: results[0].id_estudante,
-            username: results[0].username_estudante
+            username: results[0].username_estudante,
+            fotoPerfil: results[0].diretorio_foto_estudante
         }
         res.redirect(`/user/${req.session.user.username}`)
     })

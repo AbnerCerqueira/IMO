@@ -43,48 +43,48 @@
                 <hr class="linha linha-pequena">
 
                 <div class="row valign-wrapper">
-                    <div class="col s4">
-                        <img src="/img/ciscomen.svg" class="circle responsive-img" width="100">
-                    </div>
+                    <% if(fotoPerfil) { %>
+                        <div class="col s4">
+                            <img src="<%= fotoPerfil %>" class="circle responsive-img" width="100">
+                        </div>
+                    <% } else { %>
+
+                        <div class="col s4">
+                            <img src="/img/ciscomen.svg" class="circle responsive-img" width="100">
+                        </div>
+                    <% } %>
                     <div class="col s8">
-                        <a href="#" class="btn botaoporra">Editar foto de perfil</a>
+                        <form method="post" action="/user/<%= username %>/configurar-conta/foto-perfil" enctype="multipart/form-data">
+                            <input type="file" name="file">
+                            <button type="submit" class="btn botaoporra">Editar foto de perfil</button>
+                        </form>
                     </div>
                 </div>
 
-                <div class="row">
-
-                    <div class="input-field col s8">
-                        <input id="email" type="email" class="validate white-text">
-                        <label for="email">E-mail:</label>
-                    </div>
-
-                    <div class="col s4">
-                        <a href="#" class="btn botaoporra">Editar e-mail</a>
-                    </div>
-
-                </div>
+                <form method="post" action="/user/<%= username %>/configurar-conta/atualizar">
 
                 <hr class="linha">
+                    <div class="input-field">
+                        <input id="email" type="text" class="validate white-text" name="username">
+                        <label for="email">Username</label>
+                    </div>
 
-                <div class="input-field">
-                    <input id="current_password" type="password" class="validate white-text">
-                    <label for="current_password">Digite sua senha atual</label>
-                </div>
+                    <div class="input-field">
+                        <input id="new_password" type="password" class="validate white-text" name="newpass">
+                        <label for="new_password">Digite a nova senha</label>
+                    </div>
 
-                <div class="input-field">
-                    <input id="new_password" type="password" class="validate white-text">
-                    <label for="new_password">Digite a nova senha</label>
-                </div>
-
-                <div class="input-field">
-                    <input id="confirm_password" type="password" class="validate white-text">
-                    <label for="confirm_password">Digite a nova senha</label>
-                </div>
-
-                <div class="center-align">
-                    <a href="#" class="btn botaoporra">Alterar senha</a>
-                </div>
-
+                    <div class="input-field">
+                        <input id="confirm_password" type="password" class="validate white-text" name="confpass">
+                        <label for="confirm_password">Digite a nova senha</label>
+                    </div>
+                    <% if (error) { %>
+                        Algo deu errado
+                    <% } %>
+                    <div class="center-align">
+                        <button type="submit" class="btn botaoporra">Atualizar dados</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
