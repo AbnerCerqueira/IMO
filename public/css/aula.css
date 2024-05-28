@@ -4,13 +4,6 @@ body {
 
 }
 
-@font-face {
-    font-family: 'FonteIMO';
-    src: url('/fontes/bahnschrift/BAHNSCHRIFT.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* ____________________________________________________________________________________________________*/
 
 .principal{

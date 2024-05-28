@@ -4,13 +4,6 @@ body {
     letter-spacing: 1px;
 }
 
-@font-face {
-    font-family: 'FonteIMO';
-    src: url('/fontes/bahnschrift/BAHNSCHRIFT.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* ----------------INPUTS------------------- */
 
 input[type=text]:focus+label,
