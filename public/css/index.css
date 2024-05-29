@@ -1,59 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-* {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.02em;
-    padding: 0;
-    margin: 0;
-}
-
 body {
-    background-color: #F3F3F0;
+    font-family: 'FonteIMO', 'Courier New', Courier, monospace;
+    background-color: #2d2f31;
 }
 
-header {
-    height: 100px;
+
+/* ---------------------------------INICIO--------------------------------------- */
+
+.inicial {
+    display: flex;
+    flex-direction: column;
+}
+
+/* slogan */
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/index/INDEXfundo.jpg');
+    height: 80vh;
+}
+
+.slogan::after {
+    content: "";
     width: 100%;
+    height: 80vh;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.651);
+}
+
+.texto-slogan {
+    color: white;
+    font-size: 35px;
+    z-index: 2;
+}
+
+/* botao */
+
+.iniciar {
+    z-index: 2;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    padding-top: 10px;
 }
-header a{
-    color: black;
+
+.botaoazul {
+    color: white;
+    border: 1px solid #1e64e5;
+    background-color: #1e64e5;
+    padding: 7px;
+    border-radius: 5px;
 }
-header button {
-    margin-right: 20px;
+
+.botaoazul:hover {
+    border: 1px solid #1751bd;
+    background-color: #1751bd;
+    transition: 0.5s;
 }
-header div{
+
+/* carousel */
+
+.aulinhas {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0px 20px;
+    margin-top: 70px;
+    padding-bottom: 50px;
 }
-#lado_direito div{
-    margin: 0px 40px;
+
+.carousel-container {
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
 }
-#search {
-    width: 400px;
-    height: 40px;
-    border-radius: 3px;
-    margin-left: 4px;
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
 }
-#search::-webkit-input-placeholder {
+
+.carousel-item {
+    min-width: 220px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
     padding: 10px;
-}
-#informacoes a img {
-    text-decoration: none;
-    margin-left: 20px;
-}
-#infomacoes a{
-    margin-right: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
 }
 
-.cadastro-form {
-    margin-top: 5%;
+.prev {
+    left: 0;
 }
 
-#main {
-    width: 94%;
-    margin: auto;
+.next {
+    right: 0;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ---------------------------------BIBLIOTECA--------------------------------------- */
+
+.biblioteca {
+    background-color: #E0E6EB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0px;
+}
+
+.texto-popular {
+    display: flex;
+    width: 72%;
+}
+
+.cursos-populares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 1200px;
+
+}
+
+.card {
+    flex: 0 0 calc(25% - 100px);
+    margin: 50px;
+    height: 250px;
+    background-color: #f0f0f0;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    background-image: url('/img/ciscomen.svg');
+}
+
+/* ---------------------------------FOOTER--------------------------------------- */
+
+.footer{
+    height: 90vh;
+    
+    background-color: #2d2f31;
+
+    color: white;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infos-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    height: 70vh;
+    width: 80vw;
+}
+
+.infos-footer > div > h4{
+    padding-bottom: 20px;
+}
+
+a{
+    color: white;
 }

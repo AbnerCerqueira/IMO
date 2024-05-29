@@ -4,94 +4,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/botaoplay.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/components/header.css">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/components/button.css">
-    <link rel="stylesheet" href="/css/components/retangulo.css">
-    <link rel="stylesheet" href="/css/components/title.css">
-    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/fonts.css">
     <title>IMO</title>
 </head>
 
-<header>
-    <div id="lado_direito">
-        <a href="/"><img src="/img/logoHover.svg" height="50px"></a>
-        <div id="div_search">
-            <a href="#"><img src="/img/search.png" alt="" srcset="" height="35px"></a>
-            <input type="text" placeholder="Pesquise um curso" id="search">
-        </div>
-    </div>
-    <div>
-        <div><a href="#">Colabore conosco!</a></div>
-        <div id="informacoes">
-            <a href="/login"><button class="botao" type="submit">Entrar</button></a>
-            <a href="/cadastro"><button class="botao" type="submit">Cadastrar</button></a>
-        </div>
+<body>
 
-    </div>
-</header>
+    <header class="custom-header">
 
-<body onload="Logado()">
-    <div id="main">
-        <div>
-            <div class="retangulo">
-                <div id="retangulo_thumbs">
-                    <div id="retangulo-direita-dentro">
-                        <div class="thumbs">
-                            <a href="../docs/aula-excel-powerbi/powerbi-excel.html" class="cursos" target="_blank"><img
-                                    src="/img/excel-powerbi.svg" alt="..."></a>
-                            <p>
-                                •Power Bi com Excel
-                            </p>
-                        </div>
-                        <div class="thumbs">
-                            <a href="../docs/aula-html/html.html" class="cursos" target="_blank"><img src="/img/site-exemplo.svg"
-                                    alt="..."></a>
-                            <p>
-                                •Aprenda a fazer<br> seu primeiro site
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="title">Confira os cursos mais assistidos do momento!</p>
-                    </div>
-                </div>
-                <div class="retangulo_fundo">
-                    <p>
-                        É criador de conteudo
-                        educativo e quer
-                        <br>
-                        compartilhar seus vídeos
-                        <br>
-                        na nossa plataforma?
-                    </p>
-                    <button class="botao -second" type="submit">Colabore!</button>
-                </div>
+        <div class="logo">
+            <a href="/"><img src="/img/header/headerlogoinicial.svg" alt="" id="teste" onmouseenter="teste()"
+                    onmouseleave="teste()"></a>
+            <div class="pesquisa">
+                <img src="/img/header/headersearch.svg" alt="">
+                <form action="">
+                    <input type="search" name="" id="" placeholder="Pesquise por qualquer coisa..."
+                        class="caixa-pesquisa">
+                </form>
             </div>
         </div>
-        <div class="retangulo -second">
-            <div class="retangulo_fundo -second">
-                <a href="../docs/aula-html/html.html" target="_blank">
-                    <button class="botao -second" type="submit">Começar agora!</button>
-                </a>
-            </div>
-            <p>
-                Nossos cursos são acessiveis mesmo sem possuir cadastro, você pode navegar pela nossa biblioteca e
-                assistir qualquer curso entre os vários topicos disponiveis até o momento! que tal comecer sua carreira
-                na área da Tecnologia hoje mesmo?
-            </p>
+
+
+        <div class="direita">
+            <ul>
+                <li><a href="/login" class="botao">Fazer Login</a></li>
+                <li><a href="/cadastro" class="botaobranco">Cadastre-se</a></li>
+            </ul>
         </div>
-    </div>
-    <script src="/js/js.js"></script>
+    </header>
+
+    <main>
+        <section class="inicial">
+            <div class="slogan">
+                <p class="texto-slogan">DESENVOLVA SUA CARREIRA DIGITAL COM NOSSOS CURSOS PERSONALIDOS</p>
+            </div>
+
+            <div class="iniciar">
+                <a href="/aula" class="botaoazul">Comece agora!</a>
+            </div>
+
+            <div class="aulinhas">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="/img/uploads/vasto-bode.png" alt="Curso 1">
+                            <p>Power BI com Excel</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 2">
+                            <p>Aprenda a fazer seu primeiro site</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/uploads/vasto-bode.png" alt="Curso 3">
+                            <p>TESTE</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 4">
+                            <p>Aprenda a fazer seu primeiro site</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 5">
+                            <p>Power BI com Excel</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 5">
+                            <p>PORRA</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 5">
+                            <p>PORRA</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 5">
+                            <p>PORRA</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 5">
+                            <p>PORRA</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 5">
+                            <p>PORRA</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/ciscomen.svg" alt="Curso 5">
+                            <p>PORRA</p>
+                            <p>4.0 ★★★★☆</p>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="biblioteca">
+            <div class="texto-popular">
+                <h2>MAIS POPULARES</h2>
+            </div>
+            <div class="cursos-populares">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="infos-footer">
+                <div>
+                    <h4>Menu</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="">Quem Somos</a></li>
+                        <li><a href="">Termos de uso</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Tecnologias</h4>
+                    <p>HTML ● CSS ● JavaScript ● Node.js ● React ● Next.js ● Vite ● Vue.js ● Tailwind ● TypeScript ●
+                        Angular
+                        Lua ● Python ● Go ● C ● C++ ● C# ● Java ● Spring ● PHP ● Laravel ● Kotlin ● Flutter ● Rust ●
+                        Delphi
+                        SQL ● Docker ● Git ● Linux ● SSH </p>
+                </div>
+
+                <div>
+                    <h4>Cursos</h4>
+                    <p>Algorítimos e lógica de programação ● Desenvolvimento web ● Design Digital ● Banco de dados
+                        relacional e não relacional
+                        Técnicas de programação ● Estrutura de dados ● Programação mobile ● Sistemas operacionais e
+                        redes de computadores
+                        Computação em nuvem ● Engenharia de Software ● Gestão ágeil de projeto de software ● Matemárica
+                        para computação </p>
+                </div>
+                <div></div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="/js/header.js"></script>
+    <script src="/js/index.js"></script>
+
 </body>
-<footer>
-    <img src="/img/logoHover.svg" alt="LOGO" srcset="" height="50px">
-    <ul>
-        <li><a id="teste" href="#">Biblioteca de cursos</li></a>
-        <li><a href="#">Colabore</li></a>
-        <li><a href="#">FAQ</li></a>
-        <li><a href="#">Sobre nós</li></a>
-    </ul>
-</footer>
 
 </html>
