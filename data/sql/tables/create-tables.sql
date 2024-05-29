@@ -6,14 +6,16 @@ create table estudante(
     username_estudante varchar(100) not null, 
     email_estudante varchar(100) not null,
     password_estudante varchar(100) not null,
+    status BOOLEAN DEFAULT 1,
     diretorio_foto_estudante varchar(400) DEFAULT '/img/uploads/vasto-bode.png'
 );
-
 
 create table estudante_log(
     username_estudante_log varchar(100) not null, 
     email_estudante_log varchar(100) not null,
     password_estudante_log varchar(100) not null,
+    status BOOLEAN DEFAULT 1,
+    data_alteracao DATETIME,
     operacao varchar(50) not null,
     id_estudante_log int,
     foreign key (id_estudante_log) references estudante(id_estudante)
@@ -22,7 +24,8 @@ create table estudante_log(
 
 create table curso(
 	id_curso int primary key auto_increment,
-    nome_curso varchar(100) not null
+    nome_curso varchar(100) not null,
+    status BOOLEAN DEFAULT 1
 );
 
 create table certificados(
@@ -36,13 +39,15 @@ create table certificados(
 create table professor(
 	id_professor int primary key auto_increment,
     email_professor varchar(100) not null,
-    password_professor varchar(100) not null
+    password_professor varchar(100) not null,
+    status BOOLEAN DEFAULT 1
 );
 
 create table aulas(
 	id_aula int primary key auto_increment,
     nome_aula varchar(100) not null,
     data_aula date not null,
+    status BOOLEAN,
     id_professor int,
     id_curso int,
     constraint fk_AulaProfessor
