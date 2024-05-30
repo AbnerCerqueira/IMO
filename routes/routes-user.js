@@ -45,13 +45,10 @@ router.post('/:username/configurar-conta/atualizar', (req, res) => {
 const upload = multer({ storage })
 
 router.post('/:username/configurar-conta/foto-perfil', upload.single('file'),  (req, res) => {
-    const path = req.file?.path.substring(6).split('\\')
-    let fotoPerfil = '';
-    for (let i = 1; i < path.length; i++) { // loop para arrumar diretorio da imagem
-        const barra = '/'
-        path[i] = barra + path[i]
-        fotoPerfil += path[i]
-    }
+    let fotoPerfil = req.file?.path.substring(6)
+    
+    fotoPerfil = fotoPerfil.replace(/\\/g, ('/'))
+    
 
     bd.addPhoto({
         diretorio_foto_estudante: fotoPerfil
