@@ -1,6 +1,7 @@
 const express = require('express')
 const multer = require('multer')
 const bd = require('../data/bd-user')
+const bdCursos = require('../data/bd-curso')
 const storage = require('../middlewares/multer')
 
 const router = express.Router()
@@ -9,14 +10,29 @@ router.use((req, res, next) => {
     next()
 })
 
-router.get('/:username/configurar-conta', (req, res) => {
+router.use('*', (req, res, next) => {
     if (!req.session.user) {
-        res.redirect('/cadastro')
+        res.redirect('/login')
+        return
     }
+    next()
+})
+
+router.get('/:username', (req, res) => {
+    bdCursos.getCursosUser(req.session.user.id, (err, result) => {
+        if (err) throw err
+
+        const [cursos] = result
+        // console.log(cursos)
+        res.render('teste-home.ejs', { cursos })
+    }) 
+})
+
+
+router.get('/:username/configurar-conta', (req, res) => {
     res.render('configurar-conta.ejs', {
-        username: req.session.user.username,
-        error: req.query.error,
-        fotoPerfil: req.session.user.fotoPerfil
+        user: req.session.user,
+        error: req.query.error
     })
 })
 

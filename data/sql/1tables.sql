@@ -24,6 +24,7 @@ create table estudante_log(
 
 create table curso(
 	id_curso int primary key auto_increment,
+    categoria_curso varchar(100) not null,
     nome_curso varchar(100) not null,
     status BOOLEAN DEFAULT 1
 );

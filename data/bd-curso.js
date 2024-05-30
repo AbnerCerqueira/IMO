@@ -1,12 +1,7 @@
 const con = require('./database')
 
 function getAula(nome_curso, callback) {
-    const sql = `
-    SELECT a.id_aula, a.nome_aula, c.nome_curso FROM aulas a
-    INNER JOIN aulas_curso ac ON (a.id_aula = ac.id_aula)
-    INNER JOIN curso c ON (ac.id_curso = c.id_curso)
-    WHERE a.status = 1 AND c.status = 1 AND c.nome_curso = ?;
-    `
+    const sql = 'CALL pr_return_aulas_curso( ? );'
     con.query(sql, nome_curso, (err, result) => {
         if (err) {
             callback(err, null)
@@ -16,6 +11,30 @@ function getAula(nome_curso, callback) {
     })
 }
 
+function getCursosUser(id_estudante, callback) {
+    const sql = 'CALL pr_return_estudante_cursos( ? )'
+    con.query(sql, id_estudante, (err, result) => {
+        if (err) {
+            callback(err, null)
+            return
+        }
+        callback(null, result)
+    })
+}
+
+function getCursos(callback) {
+    const sql = 'SELECT categoria_curso, nome_curso FROM curso'
+    con.query(sql, (err, result) => {
+        if (err) {
+            callback(err, null)
+            return
+        }
+        callback(null, result)
+    })
+}
+
 module.exports = {
-    getAula
+    getAula,
+    getCursos,
+    getCursosUser
 }

@@ -1,6 +1,16 @@
 DELIMITER $$
+-- filtrar o link do youtube das aulas
+CREATE TRIGGER tr_link_aula_i
+BEFORE INSERT ON aulas
+FOR EACH ROW
+BEGIN
+    IF POSITION("&" IN NEW.link_aula) THEN 
+        SET NEW.link_aula = SUBSTRING(NEW.link_aula ,1, POSITION("&" IN NEW.link_aula) - 1);
+    END IF;
+END$$
 
--- insert
+
+-- log de criação conta
 CREATE TRIGGER tr_estudante_i
 AFTER INSERT ON estudante
 FOR EACH ROW
@@ -13,7 +23,7 @@ BEGIN
         NEW.email_estudante, NEW.password_estudante, NOW(), 'Criação conta');
 END$$
 
--- update
+-- log de autalização dados conta
 CREATE TRIGGER tr_estudante_u
 AFTER UPDATE ON estudante
 FOR EACH ROW

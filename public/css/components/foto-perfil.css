@@ -1,0 +1,8 @@
+#fotoPerfil {
+    height: 50px;
+    max-width: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}

@@ -92,6 +92,7 @@ body {
 }
 
 .sign {
+  cursor: pointer;
   display: block;
   width: 100%;
   background-color: #1e64e5;
