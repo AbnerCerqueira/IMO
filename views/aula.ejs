@@ -34,7 +34,7 @@
     <main class="principal">
         <div class="container-video">
 
-            <div class="video">
+            <!-- <div class="video">
                 <iframe src="https://www.youtube.com/embed/y_NnUjD-JUs" frameborder="0" width="1050px"
                     height="420px"></iframe>
                 <div class="info-video">
@@ -44,7 +44,7 @@
                         <a href=""><img src="/img/buttons/botaoProximo.svg" alt="Proximo"></a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="descricao">
                 <div class="descricao-texto">
@@ -78,26 +78,14 @@
             <h3>AULAS DO CURSO</h3>
             <hr class="linha">
             <ul>
-                <li class="menu-botao"><a href="#">Como ser um monstrinho</a></li>
+                <% for (aula of aulas) { %>
+                <li class="menu-botao"><a href="/user/<%=aula.nome_curso%>/<%=aula.nome_aula%>"><%= aula.nome_aula %></a></li>
                 <hr class="linha-pequena">
-                <li class="menu-botao"><a href="#">Aulas de susto</a></li>
-                <hr class="linha-pequena">
-                <li class="menu-botao"><a href="#">Porque se pintar de verde é bom</a></li>
-                <hr class="linha-pequena">
-                <li class="menu-botao"><a href="#">AAAAAAAAAAAAAAAAAAAAAAA</a></li>
-                <hr class="linha-pequena">
-                <li class="menu-botao"><a href="#">naoseinaoseinaoseinaosei</a></li>
-                <hr class="linha-pequena">
-                <li class="menu-botao"><a href="#">hahahahahhahahahahahhahahaha</a></li>
-                <hr class="linha-pequena">
-                <li class="menu-botao"><a href="#">Testes</a></li>
-                <hr class="linha-pequena">
-                <li class="menu-botao"><a href="#">Agradecimentos finais</a></li>
-                <hr class="linha-pequena">
+                <% } %>
             </ul>
         </div>
 
-    </main>
+    </main> 
 
     <footer class="footer">
 

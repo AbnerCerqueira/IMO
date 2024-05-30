@@ -47,9 +47,10 @@ create table aulas(
 	id_aula int primary key auto_increment,
     nome_aula varchar(100) not null,
     data_aula date not null,
-    status BOOLEAN,
+    link_aula varchar(400) not null,
+    descricao_aula varchar(500) DEFAULT '',
+    status BOOLEAN DEFAULT 1,
     id_professor int,
-    id_curso int,
     constraint fk_AulaProfessor
     foreign key(id_professor) references professor(id_professor)
 );
@@ -69,8 +70,8 @@ create table estudante_certificados(
 );
 
 create table aulas_curso(
-	id_aula int,
-    id_curso int,
+	id_aula int not null,
+    id_curso int not null,
     foreign key(id_aula) references aulas(id_aula),
     foreign key(id_curso) references curso(id_curso)
 );

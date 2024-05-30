@@ -18,9 +18,11 @@ app.use(session({
 
 const index = require('./routes/routes-index')
 const user = require('./routes/routes-user')
+const biblioteca = require('./routes/routes-curso')
 
 app.use('/', index)
 app.use('/user', user)
+app.use('/library', biblioteca)
 
 const port = process.env.PORT || 8080
 app.listen(port, () => {
