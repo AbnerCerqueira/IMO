@@ -9,7 +9,7 @@ header{
     height: 100px !important;
     background-color: #2d2f31 !important;
     align-items: center !important;
-    box-shadow: 2px 0px 1px white !important;
+    border-bottom: 1px solid #5E6367 !important;
 }
 
 .logo{
@@ -69,6 +69,14 @@ header{
     padding: 7px;
 }
 
+#fotoPerfil {
+    height: 50px;
+    max-width: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
 
 a{
     text-decoration: none !important;

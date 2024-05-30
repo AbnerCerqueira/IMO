@@ -35,6 +35,16 @@ router.get('/:username/configurar-conta', (req, res) => {
         error: req.query.error
     })
 })
+router.get('/:username/c', (req, res) => {
+    if (!req.session.user) {
+        res.redirect('/cadastro')
+    }
+    res.render('meus-cursos.ejs', {
+        username: req.session.user.username,
+        error: req.query.error,
+        fotoPerfil: req.session.user.fotoPerfil
+    })
+})
 
 router.post('/:username/configurar-conta/atualizar', (req, res) => {
     const { username, newpass, confpass} = req.body

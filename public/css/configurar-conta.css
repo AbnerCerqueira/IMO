@@ -30,6 +30,9 @@ input[type=password].white-text {
     color: white;
 }
 
+.container{
+    height: 90vh;
+}
 /* ______________________________________________________ */
 
 
@@ -71,4 +74,10 @@ input[type=password].white-text {
 .botaoporra:hover{
     background-color: #1e64e5 !important;
     border: 1px solid #1e64e5 !important;
+}
+
+
+
+a{
+    color: black;
 }

@@ -1,0 +1,73 @@
+body {
+    background-color: #2D2F31;
+    font-family: 'FonteIMO','Courier New', Courier, monospace,serif;
+    color: white;
+}
+
+.principal{
+    background-color: #2D2F31;
+
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*-------------------------------------CURSOS-----------------------------------*/
+
+.sem-cursos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    color: rgb(128, 128, 128);
+
+    height: 150px;
+    width: 300px;
+}
+
+.cursos{
+    margin: 50px 0px;
+}
+
+.card-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1200px;
+}
+
+.card {
+    flex: 0 0 calc(25% - 80px);
+    margin: 25px;
+    height: 250px;
+    background-color: #2D2F31;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+
+    box-shadow: 5px 5px 2px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.texto-curso {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    width: 180px;
+    color: white;
+}
+/* ---------------------------------------------------------------------------------- */
+
+.linha-pequena {
+    width: calc(100% - 20px);
+    border: 1px solid #5E6367;
+    background-color: #5E6367;
+}
+a{
+    color: rgb(0, 0, 0);
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 footer {
     margin-top: 100px;
     width: 100%;
@@ -19,3 +20,49 @@ footer ul li a:hover {
     opacity: 0.8;
     text-decoration: underline;
 }
+=======
+/* ---------------------------------FOOTER--------------------------------------- */
+
+.footer{
+    min-height: 90vh ;
+    
+    font-size: 20px ;
+
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+
+}
+
+.infos-footer{
+    display: flex ;
+    flex-direction: column ;
+    gap: 80px ;
+    min-height: 70vh ;
+    width: 80vw ;
+    margin-top: 50px;
+}
+
+.infos-footer > div > h4{
+    padding-bottom: 20px ;
+}
+
+.infos-footer > div > ul{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-white{
+    background-color: #E0E6EB ;
+    border-top: 1px solid #5b6064;
+    color: black;
+}
+
+.footer-black{
+    background-color: #2d2f31 ;
+    border-top: 1px solid #5b6064;
+    color: white ;
+
+
+}
+>>>>>>> 919e7cf (feat: criação pagina de cursos/ atualização footer)

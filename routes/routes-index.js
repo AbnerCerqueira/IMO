@@ -12,6 +12,10 @@ router.use((req, res, next) => {
 router.get('/', (req, res) => {
     res.render('index.ejs')
 })
+router.get('/meus-cursos', (req, res) => {
+    res.render('meus-cursos.ejs')
+})
+
 
 router.get('/login', (req, res) => {
     res.render('login.ejs', {
