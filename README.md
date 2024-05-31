@@ -1,1 +1,16 @@
-
+# Tutorial
+- Abra o terminal e use
+- `git clone https://github.com/AbnerCerqueira/IMO.git`
+- `cd IMO`
+- `npm i`
+- Agora Inicie o servidor do MySQL na sua máquina
+- Se suas configurações forem diferente do padrão, mude diretamente no arquivo ou crie um .env e atribua às variáveis suas configurações
+- O padrão é usuário root e senha vazia
+- ![image](https://github.com/AbnerCerqueira/IMO/assets/102826252/0e2583d8-6808-48c1-b2ab-c164f2e6714a)
+- Execute **TODOS** os Scripts que estão na pasta sql, sem eles o site não ficará funcional
+- [Scripts para executar no banco MySQL](https://github.com/AbnerCerqueira/IMO/tree/main/data/sql)
+- Qualquer dúvida tem no arquivo cometários explicando o que cada coisa faz
+- Depois de fazer isso inicie o servidor
+- `npm run dev`
+- ![image](https://github.com/AbnerCerqueira/IMO/assets/102826252/9b18e01a-b978-4f41-9543-17d747340ffe)
+- Abra o navegador e digite na url `http://localhost:8080`
