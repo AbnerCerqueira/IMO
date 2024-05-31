@@ -54,7 +54,7 @@
             <hr class="linha">
             <ul>
                 <% aulas.forEach((aula, index) => { %>
-                <li class="menu-botao"><a href="/library/<%= aula.categoria_curso %>/<%=aula.nome_curso%>?aula=<%=aula.nome_aula%>"><%= index + 1 %></a></li>
+                <li class="menu-botao"><a href="/library/<%= aula.categoria_curso %>/<%=aula.nome_curso%>?aula=<%=aula.nome_aula%>"><%= index + 1 %>     <%= aula.nome_aula %></a></li>
                 <hr class="linha-pequena">
                 <% }) %>
             </ul>
