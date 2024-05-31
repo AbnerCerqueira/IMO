@@ -18,13 +18,13 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url('/img/index/INDEXfundo.jpg');
-    height: 80vh;
+    height: 70vh;
 }
 
 .slogan::after {
     content: "";
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     position: absolute;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.651);
@@ -79,13 +79,19 @@ body {
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
+    height: 200px;
 }
 
 .carousel-item {
     min-width: 220px;
-    margin: 0 10px;
+    margin: 10px 10px;
     text-align: center;
     color: white;
+    transition: 0.5s;
+}
+
+.carousel-item:hover {
+    transform: scale(1.1);
 }
 
 .carousel-item img {
@@ -100,7 +106,7 @@ body {
     padding: 10px;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     z-index: 999;
 }

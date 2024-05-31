@@ -12,8 +12,8 @@ app.use(session({
     saveUninitialized: false
 }))
 
-// app.use(function(req, res, next) {
-//     res.status(404).redirect('/error404.html') // Redireciona para a página desejada
+// app.use((err, req, res, next) => {
+//     res.status(500).send('Erro interno no servidor')
 // })
 
 const index = require('./routes/routes-index')
@@ -23,6 +23,10 @@ const biblioteca = require('./routes/routes-curso')
 app.use('/', index)
 app.use('/user', user)
 app.use('/library', biblioteca)
+
+app.use((req, res, next) => {
+    res.status(404).redirect('/error404.html')
+})
 
 const port = process.env.PORT || 8080
 app.listen(port, () => {

@@ -24,7 +24,7 @@ router.get('/:username', (req, res) => {
 
         const [cursos] = result
         // console.log(cursos)
-        res.render('teste-home.ejs', { cursos })
+        res.render('meus-cursos.ejs', { cursos, user: req.session.user })
     }) 
 })
 
@@ -33,16 +33,6 @@ router.get('/:username/configurar-conta', (req, res) => {
     res.render('configurar-conta.ejs', {
         user: req.session.user,
         error: req.query.error
-    })
-})
-router.get('/:username/c', (req, res) => {
-    if (!req.session.user) {
-        res.redirect('/cadastro')
-    }
-    res.render('meus-cursos.ejs', {
-        username: req.session.user.username,
-        error: req.query.error,
-        fotoPerfil: req.session.user.fotoPerfil
     })
 })
 

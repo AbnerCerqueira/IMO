@@ -7,39 +7,21 @@
     <link rel="stylesheet" href="/css/components/header.css">
     <link rel="stylesheet" href="/css/components/footer.css">
     <link rel="stylesheet" href="/css/meus-cursos.css">
-    <title>Meus cursos</title>
+    <title>Cursos <%= user.username %> / IMO</title>
 </head>
 <body>
-    <header class="custom-header">
-        <div class="logo">
-            <a href="/"><img src="/img/header/headerlogoinicial.svg" alt="" id="teste" onmouseenter="teste()" onmouseleave="teste()"></a>
-            <div class="pesquisa">
-                <img src="/img/header/headersearch.svg" alt="">
-                <form action="">
-                    <input type="search" name="" id="" placeholder="Pesquise por qualquer coisa..."
-                        class="caixa-pesquisa">
-                </form>
-            </div>
-        </div>
 
-
-        <div class="direita">
-            <ul>
-                <li><a href="" class="botao">Aprendizado</a></li>
-                <li><a href=""><img src="<%= fotoPerfil %>" alt="" id="fotoPerfil"></a></li> 
-            </ul>
-        </div>
-    </header>
-
+    <%- include ('partials/header') %>
 
     <main class="principal">
 
-        <!-- <div class="sem-cursos">
+        <% if(!cursos.length) { %>
+        <div class="sem-cursos">
             <h3>Nenhum curso iniciado...</h3>
             <a href="/" class="botao">Clique aqui</a>
             <h4>para iniciar um curso</h4>
-        </div> -->
-
+        </div>
+    <% } else { %>
         <div class="cursos">
 
             <div class="texto-curso">
@@ -48,7 +30,7 @@
             </div>
     
             <div class="card-cursos">
-                <div class="card">
+                <!-- <div class="card">
                     <p>PROGRESSO 0%</p>
                     <img src="/img/index/thumbgit.png" alt="Imagemdocurso">
                     <h3>Git</h3>
@@ -71,18 +53,19 @@
                     <img src="/img/index/thumbreact.png" alt="Imagemdocurso">
                     <h3>React</h3>
                     <a href=""><img src="/img/menu-curso/botao-iniciar.svg" alt=""></a>
-                </div>
+                </div> -->
                
-               
-            
-               
-                
-                   
-                
-                
-                
+                <% cursos.forEach(curso => { %>
+                    <div class="card">
+                        <!-- <p>PROGRESSO 0%</p> -->
+                        <img src="<%= curso.diretorio_thumbnail_curso %>" alt="Imagemdocurso">
+                        <h3><%= curso.nome_curso %></h3>
+                        <a href="/library/<%= curso.categoria_curso%>/<%= curso.nome_curso %>"><img src="/img/menu-curso/botao-iniciar.svg" alt=""></a>
+                    </div>
+                <% }) %>
             </div>
         </div>
+    <% } %>
     </main>
 
 

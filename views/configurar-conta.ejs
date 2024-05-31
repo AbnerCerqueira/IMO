@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurações da Conta <%=user.username%></title>
+    <title>Configurações da Conta <%=user.username%> / IMO</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/css/configurar-conta.css">
@@ -16,26 +16,7 @@
 
 <body>
 
-    <header class="custom-header">
-        <div class="logo">
-            <a href="/"><img src="/img/header/headerlogoinicial.svg" alt="" id="teste" onmouseenter="teste()" onmouseleave="teste()"></a>
-            <div class="pesquisa">
-                <img src="/img/header/headersearch.svg" alt="">
-                <form action="">
-                    <input type="search" name="" id="" placeholder="Pesquise por qualquer coisa..."
-                        class="caixa-pesquisa">
-                </form>
-            </div>
-        </div>
-
-
-        <div class="direita">
-            <ul>
-                <li><a href="/user/<%=user.username%>" class="botao">Aprendizado</a></li>
-                <li><a href="/user/<%=user.username%>/configurar-conta"><img src="<%= user.fotoPerfil %>" id="fotoPerfil" alt="fotoPerfil"></a></li>
-            </ul>
-        </div>
-    </header>
+    <%- include ('partials/header') %>
 
     <div class="container white-text">
         <div class="row">
@@ -62,7 +43,7 @@
                 <hr class="linha">
                     <div class="input-field">
                         <input id="email" type="text" class="validate white-text" name="username">
-                        <label for="email">Username</label>
+                        <label for="email">Digite o novo username</label>
                     </div>
 
                     <div class="input-field">
@@ -75,7 +56,7 @@
                         <label for="confirm_password">Digite a nova senha</label>
                     </div>
                     <% if (error) { %>
-                        Algo deu errado
+                        <span style="color: red;" >Algo deu errado</span>
                     <% } %>
                     <div class="center-align">
                         <button type="submit" class="btn botaoporra">Atualizar dados</button>

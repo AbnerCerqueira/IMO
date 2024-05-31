@@ -4,9 +4,12 @@
 use imo;
 
 -- cursos
-insert into curso(categoria_curso, nome_curso) values ('Desenvolvimento web', 'JavaScript');
-insert into curso(categoria_curso, nome_curso) values ('Desenvolvimento web', 'Git');
-insert into curso(categoria_curso, nome_curso) values ('Desenvolvimento web', 'React Hooks');
+insert into curso(categoria_curso, nome_curso, diretorio_thumbnail_curso) values ('Desenvolvimento web', 'JavaScript', '/img/thumbnails/thumbjs.png');
+insert into curso(categoria_curso, nome_curso, diretorio_thumbnail_curso) values ('Desenvolvimento web', 'React', '/img/thumbnails/thumbreact.png');
+insert into curso(categoria_curso, nome_curso, diretorio_thumbnail_curso) values ('Desenvolvimento web', 'Git', '/img/thumbnails/thumbgit.png');
+insert into curso(categoria_curso, nome_curso, diretorio_thumbnail_curso) values ('Desenvolvimento web', 'Banco de dados', '/img/thumbnails/thumbbd.png');
+insert into curso(categoria_curso, nome_curso, diretorio_thumbnail_curso) values ('Desenvolvimento web', 'Excel', '/img/thumbnails/thumbexcel.png');
+
 
 -- javacrips aulas
 CALL pr_add_aulas_curso('JavaScript', 'Callback Functions', 'https://www.youtube.com/watch?v=Pk3AoFgSiU0&list=PL0X6fGhFFNTcBB9N4fPyMgtOxfvyujiEh&index=13&t=702s');
@@ -20,16 +23,19 @@ CALL pr_add_aulas_curso('Git', 'Aliases', 'https://www.youtube.com/watch?v=CAnQ4
 CALL pr_add_aulas_curso('Git', 'Corriga Conflitos', 'https://www.youtube.com/watch?v=DloR0BOGNU0');  
 CALL pr_add_aulas_curso('Git', 'Commits Semânticos', 'https://www.youtube.com/watch?v=SQNb-NxZBPQ');  
 
-insert into estudante_curso values(1, 2);
-
 -- react hooks aulas
-CALL pr_add_aulas_curso('React Hooks', 'useState', 'https://www.youtube.com/watch?v=HYKDUF8X3qI&list=PLApy4UwQM3UrZsBTY111R6P4frt6WK-G2&index=5&pp=iAQB');  
-CALL pr_add_aulas_curso('React Hooks', 'useEffect', 'https://www.youtube.com/watch?v=-4XpG5_Lj_o&list=PLApy4UwQM3UrZsBTY111R6P4frt6WK-G2&index=2&pp=iAQB');  
-CALL pr_add_aulas_curso('React Hooks', 'useMemo', 'https://www.youtube.com/watch?v=vpE9I_eqHdM&list=PLApy4UwQM3UrZsBTY111R6P4frt6WK-G2&index=3&pp=iAQB');  
-CALL pr_add_aulas_curso('React Hooks', 'useCallback', 'https://www.youtube.com/watch?v=MxIPQZ64x0I&list=PLApy4UwQM3UrZsBTY111R6P4frt6WK-G2&index=4&pp=iAQB');  
+CALL pr_add_aulas_curso('React', 'Fetch data', 'https://www.youtube.com/watch?v=00lxm_doFYw&list=PLApy4UwQM3UqAkfITNFzlqoD__UI6X5pb&index=1&t=9s&pp=iAQB');  
+CALL pr_add_aulas_curso('React', 'Estrutura do projeto', 'https://www.youtube.com/watch?v=ANrYhHN8Dl4&list=PLApy4UwQM3UqAkfITNFzlqoD__UI6X5pb&index=2&pp=iAQB');  
+
+-- aulas banco de dados
 
 
--- matricular o aluno nos cursos
+-- aulas excel
+
+
+-- matricular o aluno nos cursos, precisa criar uma conta antes, pra esses insert funcionar
 INSERT INTO estudante_curso values(1, 1);
 INSERT INTO estudante_curso values(1, 2);
 INSERT INTO estudante_curso values(1, 3);
+INSERT INTO estudante_curso values(1, 4);
+INSERT INTO estudante_curso values(1, 5);

@@ -23,7 +23,7 @@ function getCursosUser(id_estudante, callback) {
 }
 
 function getCursos(callback) {
-    const sql = 'SELECT categoria_curso, nome_curso FROM curso'
+    const sql = 'SELECT categoria_curso, nome_curso, diretorio_thumbnail_curso FROM curso'
     con.query(sql, (err, result) => {
         if (err) {
             callback(err, null)

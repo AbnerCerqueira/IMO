@@ -9,7 +9,7 @@
 
 
 
-  <title>Cadastro</title>
+  <title>Cadastro / IMO</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
   <div class="form-container">
     
     <a href="/"><img src="/img/logoHover.svg"></a>
-    <p class="title">CADASTRO</p>
+    <p class="title">Cadastro</p>
     <!-- Formulario -->
 
     <form class="form" action="/cadastro" method="post">
@@ -41,7 +41,7 @@
         </div>
       </div>
       <% if (error) {%>
-        Algo deu errado
+        <span style="color: red;" >Algo deu errado</span>
         <% } %>
       <button class="sign" type="submit">Cadastrar-se</button>
     </form>

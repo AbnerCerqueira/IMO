@@ -30,7 +30,7 @@ END$$
 -- te retornar os cursos que o aluno está matriculado
 CREATE PROCEDURE pr_return_estudante_cursos(IN p_id_estudante VARCHAR(100))
 BEGIN
-    SELECT e.username_estudante, c.categoria_curso, c.nome_curso FROM curso c
+    SELECT e.username_estudante, c.categoria_curso, c.nome_curso, c.diretorio_thumbnail_curso FROM curso c
     INNER JOIN estudante_curso ec ON (c.id_curso = ec.id_curso)
     INNER JOIN estudante e ON (ec.id_estudante = e.id_estudante)
     WHERE e.status = 1 AND c.status = 1 AND e.id_estudante = p_id_estudante;

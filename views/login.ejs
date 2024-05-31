@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/css/components/fonts.css">
 
 
-  <title>Login</title>
+  <title>Login / IMO</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
   <div class="form-container">
     
     <a href="/"><img src="/img/logoHover.svg"></a>
-    <p class="title">LOGIN</p>
+    <p class="title">Login</p>
     <!-- Formulario -->
 
     <form class="form" action="/login" method="post">
@@ -32,7 +32,7 @@
         </div>
       </div>
       <% if (error) {%>
-        Algo deu errado
+        <span style="color: red;" >Algo deu errado</span>
         <% } %>
       <button class="sign">Entrar</button>
     </form>

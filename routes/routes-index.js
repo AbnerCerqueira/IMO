@@ -1,5 +1,6 @@
 const express = require('express')
 const bd = require('../data/bd-user')
+const bdCursos = require('../data/bd-curso')
 
 const router = express.Router()
 
@@ -10,12 +11,12 @@ router.use((req, res, next) => {
 })
 
 router.get('/', (req, res) => {
-    res.render('index.ejs')
+    bdCursos.getCursos((err, result) => {
+        if (err) throw err
+        const cursos = result
+        res.render('index.ejs', { cursos, user: req.session.user })
+    })
 })
-router.get('/meus-cursos', (req, res) => {
-    res.render('meus-cursos.ejs')
-})
-
 
 router.get('/login', (req, res) => {
     res.render('login.ejs', {

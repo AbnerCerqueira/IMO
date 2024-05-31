@@ -35,7 +35,7 @@ router.get('/:categoria/:curso', (req, res) => {
                 res.redirect(`/library/${aulas[0].categoria_curso}/${aulas[0].nome_curso}?aula=${aulas[0].nome_aula}`)
             } catch (err) {
                 console.log(err)
-                res.send('curso nao existe')
+                res.status(404).redirect('/error404.html')
             }
         }
 

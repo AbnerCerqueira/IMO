@@ -1,0 +1,30 @@
+
+<header class="custom-header">
+
+    <div class="logo">
+        <a href="/"><img src="/img/header/headerlogoinicial.svg" alt="" id="teste" onmouseenter="teste()"
+                onmouseleave="teste()"></a>
+        <div class="pesquisa">
+            <img src="/img/header/headersearch.svg" alt="">
+            <form action="">
+                <input type="search" name="" id="" placeholder="Pesquise por qualquer coisa..."
+                    class="caixa-pesquisa">
+            </form>
+        </div>
+    </div>
+
+
+    <div class="direita">
+        <% if (user) { %>
+            <ul>
+                <li><a href="/user/<%=user.username%>" class="botao">Meus cursos</a></li>
+                <li><a href="/user/<%=user.username%>/configurar-conta"><img src="<%= user.fotoPerfil %>" alt="fotoperfil" id="fotoPerfil"></a></li>
+            </ul>
+        <% } else { %>
+            <ul>
+                <li><a href="/login" class="botao">Fazer Login</a></li>
+                <li><a href="/cadastro" class="botaobranco">Cadastre-se</a></li>
+            </ul>
+        <% } %>
+    </div>
+</header>
