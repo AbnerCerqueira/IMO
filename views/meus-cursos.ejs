@@ -18,14 +18,14 @@
         <% if(!cursos.length) { %>
         <div class="sem-cursos">
             <h3>Nenhum curso iniciado...</h3>
-            <a href="/" class="botao">Clique aqui</a>
+            <a href="/library" class="botao">Clique aqui</a>
             <h4>para iniciar um curso</h4>
         </div>
     <% } else { %>
         <div class="cursos">
 
             <div class="texto-curso">
-                <h2>MEUS CURSOS</h2>
+                <h2>Continuar assistindo</h2>
                 <hr class="linha-pequena">
             </div>
     
@@ -55,7 +55,7 @@
                     <a href=""><img src="/img/menu-curso/botao-iniciar.svg" alt=""></a>
                 </div> -->
                
-                <% cursos.forEach(curso => { %>
+                <% cursos.reverse().forEach(curso => { %>
                     <div class="card">
                         <!-- <p>PROGRESSO 0%</p> -->
                         <img src="<%= curso.diretorio_thumbnail_curso %>" alt="Imagemdocurso">

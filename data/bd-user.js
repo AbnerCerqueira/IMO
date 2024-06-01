@@ -27,7 +27,7 @@ function updateUser(senha, id, callback) {
   con.query(sql, [senha, id], (err, result) => {
     if (err) {
       callback(err, null)
-      return 
+      return
     }
     callback(null, result)
   })
@@ -44,10 +44,22 @@ function addPhoto(file, id, callback) {
   })
 }
 
+function addCurso(id_estudante, id_curso, callback) {
+  const sql = 'CALL pr_add_estudante_curso(?, ?)'
+  con.query(sql, [id_estudante, id_curso], (err, result) => {
+    if (err) {
+      callback(err, null)
+      return
+    }
+    callback(null, result)
+  })
+}
+
 
 module.exports = {
   addUser,
   getUser,
   updateUser,
-  addPhoto
+  addPhoto,
+  addCurso
 }

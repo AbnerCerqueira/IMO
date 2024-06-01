@@ -16,6 +16,18 @@ BEGIN
     INSERT INTO aulas_curso(id_curso, id_aula) VALUES (p_id_curso, p_id_aula);
 END$$
 
+-- verificar se o aluno ja esta naquele curso antes de inserir na taela
+CREATE PROCEDURE pr_add_estudante_curso(IN p_id_estudante INT, IN p_id_curso INT)
+BEGIN
+    IF NOT EXISTS(
+        SELECT id_estudante, id_curso
+        FROM estudante_curso
+        WHERE id_estudante = p_id_estudante AND id_curso = p_id_curso
+    )THEN
+    INSERT INTO estudante_curso(id_estudante, id_curso) VALUES (p_id_estudante, p_id_curso);
+    END IF;
+END$$
+
 -- te retorna as aulas que pertemcem ao cursos q voce passar como argumento
 CREATE PROCEDURE pr_return_aulas_curso(IN p_nome_curso VARCHAR(100))
 BEGIN

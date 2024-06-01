@@ -146,6 +146,14 @@ body {
 
 }
 
+.cursos-populares > div {
+    transition: 0.5s;
+}
+
+.cursos-populares > div:hover {
+    transform: scale(1.05);
+}
+
 .card {
     flex: 0 0 calc(25% - 100px);
     margin: 50px;

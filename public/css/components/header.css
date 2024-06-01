@@ -53,6 +53,7 @@ header{
     border: 1px solid white !important;
     background-color: rgba(0, 0, 255, 0) !important;
     padding: 7px !important;
+    cursor: pointer;
 }
 
 .botao:hover, .botaobranco:hover{

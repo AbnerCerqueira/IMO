@@ -26,6 +26,7 @@ create table curso(
 	id_curso int primary key auto_increment,
     categoria_curso varchar(100) not null,
     nome_curso varchar(100) not null,
+    descricao_curso varchar(400) default '',
     status BOOLEAN DEFAULT 1,
     diretorio_thumbnail_curso varchar(400) not null
 );

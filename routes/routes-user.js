@@ -80,4 +80,13 @@ router.post('/:username/configurar-conta/foto-perfil', upload.single('file'),  (
     res.redirect(req.get('referer'))
 })
 
+router.post('/addCurso', (req, res) => {
+    const { id } = req.session.user
+    const { id_curso, diretorio_aulas } = req.body
+    bd.addCurso(id, id_curso, (err, result) => {
+        if (err)throw err
+        res.redirect(diretorio_aulas)
+    })
+})
+
 module.exports = router

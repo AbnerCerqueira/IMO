@@ -8,11 +8,11 @@ router.use((req, res, next) => {
     next()
 })
 
-router.get('/', (req, res) => {
+router.get('/', (req, res) => { // pagina com todos cursos
     bdCurso.getCursos((err, result) => {
         if (err) throw err
         const cursos = result
-        res.render('teste-biblioteca.ejs', { cursos })
+        res.render('biblioteca.ejs', { cursos, user: req.session.user })
     })
 })
 
@@ -29,7 +29,7 @@ router.get('/:categoria/:curso', (req, res) => {
     const { aula } = req.query
     
     cursoAulas(curso, (aulas) => {
-
+        
         if(!aula ){ // redirecionar pra primeira aula se n tiver nada na url
             try {
                 res.redirect(`/library/${aulas[0].categoria_curso}/${aulas[0].nome_curso}?aula=${aulas[0].nome_aula}`)
@@ -60,7 +60,7 @@ function cursoAulas(curso, callback) {
             aulas[i].nome_curso = aulas[i].nome_curso.replace(/\s+/g, '-').toLowerCase() // pegar os espaço em branco e tranformar em hífen
             // aulas[i].nome_aula = aulas[i].nome_aula.replace(/\s+/g, '-').toLowerCase() // pegar os espaço em branco e tranformar em hífen
             aulas[i].link_aula = aulas[i].link_aula.replace("watch?v=", "embed/")
-            aulas[i].link_aula = aulas[i].link_aula.replace(/&/g, "")
+            // aulas[i].link_aula = aulas[i].link_aula.replace(/&/g, "")
         }
         callback(aulas)
     })

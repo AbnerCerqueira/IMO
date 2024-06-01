@@ -17,11 +17,13 @@
     <div class="direita">
         <% if (user) { %>
             <ul>
+                <li><a href="/library" class="botao">Todos cursos</a></li>
                 <li><a href="/user/<%=user.username%>" class="botao">Meus cursos</a></li>
                 <li><a href="/user/<%=user.username%>/configurar-conta"><img src="<%= user.fotoPerfil %>" alt="fotoperfil" id="fotoPerfil"></a></li>
             </ul>
         <% } else { %>
             <ul>
+                <li><a href="/library" class="botao">Todos cursos</a></li>
                 <li><a href="/login" class="botao">Fazer Login</a></li>
                 <li><a href="/cadastro" class="botaobranco">Cadastre-se</a></li>
             </ul>

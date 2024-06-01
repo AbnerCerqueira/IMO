@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/components/fonts.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/biblioteca.css">
+    <title>Cursos disponíveis / IMO</title>
+</head>
+
+<body>
+
+    <%- include ('partials/header') %>
+
+    <main class="principal">
+        <div class="cursos">
+            
+            <div class="texto-curso">
+                <h2>Cursos disponíveis</h2>
+                <hr class="linha-pequena">
+            </div>
+
+            <div class="card-cursos">
+                <% cursos.forEach(curso=>{%>
+                <div class="card">
+                    <img src="<%= curso.diretorio_thumbnail_curso %>" alt="Imagemdocurso">
+                    <h3><%= curso.nome_curso %></h3>
+                    <button class="botao abrirmodal">Saiba Mais</button>
+
+                    <dialog>
+                        <div class="conteudo-curso">
+                            <div class="nome-curso">
+                                <img src="<%= curso.diretorio_thumbnail_curso %>" alt="Imagemdocurso">
+                                <h3>Descrição:</h3>
+                            </div>
+
+                            <div class="descricao-curso">
+                                <p>
+                                    <%= curso.descricao_curso %>
+                                </p>
+                            </div>
+
+                            <div class="botoes-curso">
+                                <div id="fds">
+                                <form action="/user/addCurso" method="post"> <!-- pegar o id do curso e adicionar o usuario -->
+                                    <input type="hidden" name="id_curso" value="<%= curso.id_curso %>">
+                                    <input type="hidden" name="diretorio_aulas" value="/library/<%= curso.categoria_curso%>/<%= curso.nome_curso %>">
+                                    <button class="botaos" type="submit">Começar agora</button>
+                                </form>
+                                    <button class="botaofechar botaos">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
+
+                </div>
+                <% }) %>
+            </div>
+
+        </div>
+    </main>
+
+
+    <%- include('partials/footer.ejs', { background: 'white' }) %>
+
+    <script src="/js/header.js"></script>
+    <script src="/js/nossos-cursos.js"></script>
+</body>
+
+</html>

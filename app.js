@@ -24,9 +24,9 @@ app.use('/', index)
 app.use('/user', user)
 app.use('/library', biblioteca)
 
-app.use((req, res, next) => {
-    res.status(404).redirect('/error404.html')
-})
+// app.use((req, res, next) => {
+//     res.status(404).redirect('/error404.html')
+// })
 
 const port = process.env.PORT || 8080
 app.listen(port, () => {
