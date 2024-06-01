@@ -23,6 +23,11 @@ router.get('/login', (req, res) => {
         error: req.query.error
     })
 })
+router.get('/m', (req, res) => {
+    res.render('nossos-cursos.ejs', {
+        error: req.query.error
+    })
+})
 
 router.get('/cadastro', (req, res) => {
     res.render('cadastro.ejs', {
