@@ -16,7 +16,7 @@ insert into curso(categoria_curso, nome_curso, diretorio_thumbnail_curso, descri
 -- javacrips aulas
 CALL pr_add_aulas_curso('JavaScript', 'Callback Functions', 'https://www.youtube.com/watch?v=Pk3AoFgSiU0&list=PL0X6fGhFFNTcBB9N4fPyMgtOxfvyujiEh&index=13&t=702s');
 CALL pr_add_aulas_curso('JavaScript', 'Async Callback Functions', 'https://www.youtube.com/watch?v=bLpkoyrsALc&list=PL0X6fGhFFNTcBB9N4fPyMgtOxfvyujiEh&index=15&t=775s');
-CALL pr_add_aulas_curso('JavaScript', 'Pare com o If Else', 'https://www.youtube.com/watch?v=CVeSF7-gjWM&list=PL0X6fGhFFNTcBB9N4fPyMgtOxfvyujiEh&index=14');
+CALL pr_add_aulas_curso('JavaScript', 'Pare de usar Else', 'https://www.youtube.com/watch?v=CVeSF7-gjWM&list=PL0X6fGhFFNTcBB9N4fPyMgtOxfvyujiEh&index=14');
 CALL pr_add_aulas_curso('JavaScript', 'Pare de usar Ponto e Vírgula', 'https://www.youtube.com/watch?v=J2DmeQQHLRo');
 
 -- react aulas

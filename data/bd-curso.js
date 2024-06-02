@@ -23,7 +23,7 @@ function getCursosUser(id_estudante, callback) {
 }
 
 function getCursos(callback) {
-    const sql = 'SELECT * FROM curso'
+    const sql = 'SELECT * FROM curso WHERE status = 1'
     con.query(sql, (err, result) => {
         if (err) {
             callback(err, null)
